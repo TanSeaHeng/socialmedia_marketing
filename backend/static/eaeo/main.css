@@ -1,0 +1,332 @@
+.hand{
+    cursor: pointer;
+}
+.main-sidebar{
+    background-color: #ecf0f5 !important;
+}
+.sidebar-menu>li:hover>a, .sidebar-menu>li.menu-open>a, .sidebar-menu>li.active>a {
+    color: #fff;
+    background: #53636d !important;
+}
+.left_sidebar_a {
+    border-left-color: #d0d5d8  !important;
+}
+.left_sidebar_border {
+    border-right: solid 1px #b6babb;
+}
+.cc_btn {
+    margin: auto;
+    display: block;
+    font-size: 20px;
+}
+
+.section_div{
+    height: calc(100vh - 150px) !important;
+}
+
+.cutable{
+    width: 100% !important;
+    border: 1px solid #cac8c8 !important;
+    border-bottom-width: 0 !important;
+    border-left-width: 0 !important;
+}
+
+.cutable tr th {
+    border: 1px solid #cac8c8 !important;
+    border-right-width: 0 !important;
+    border-top-width: 0 !important;
+    border-bottom-width: 0 !important;
+}
+.cutable tr td {
+    border: 1px solid #cac8c8 !important;
+    border-right-width: 0 !important;
+    border-top-width: 0 !important;
+}
+.form-control_c {
+    border-color: #adb2bb !important;
+}
+
+.select2 span {
+    border-color: #adb2bb !important;
+}
+.cpnm {
+    font-size: 26px;
+}
+
+.spc_div_inf_li {
+    overflow-x: scroll;
+    width: 100%;
+    display: -webkit-inline-box !important;
+    display: -moz-inline-box !important;
+}
+
+.wdt_kit {
+    width: -webkit-fill-available;
+    width: -moz-fit-content;
+}
+
+.post_title {
+    font-size: 17px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.cu_box {
+    border: 1px solid #00c0ef !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+    height: 6px;
+}
+
+/* Track */
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.land_title {
+    font-size: 50px;
+}
+
+@media (max-width: 767px) {
+    .land_title {
+        font-size: 30px;
+    }
+}
+
+.snap_inland_1 {
+    height: 80%;
+    width: 100%;
+    background-image: url(/static/library/img/snap_01.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-mask-image: url(/static/library/img/snap_01_mask.png);
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url(/static/library/img/snap_01_mask.png);
+}
+
+.logo_img {
+    width: 100%;
+}
+.img-responsive{
+    display: block;
+    max-width: 80%;
+    max-height: 70px;
+    margin: auto;
+}
+.desaturate {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 25px;
+}
+.owl-item {
+    margin-right: 3px;
+}
+.im60{
+    width: 100%;
+}
+
+.imsp{
+    display: none;
+}
+
+
+.cu-header {
+    box-shadow: 0 3px 6px rgb(0 0 0 / 10%), 0 3px 6px rgb(108 148 122 / 90%) !important;
+    position: fixed;
+    width: 100%;
+}
+
+.cu-cnbtn {
+    font-style: italic;
+    font-size: 25px;
+    height: 50px;
+    color: #7cab8b !important;
+    text-decoration: none;
+    border: 2px solid !important;
+    border-radius: 5px !important;
+    border-color: #7cab8b !important;
+    background-color: #343434 !important;
+}
+
+.cu_6_col {
+    padding: 10px; text-align: center
+}
+
+.imin {
+    width: 100%;
+    position: relative;
+    height: 400px;
+}
+
+.bg_60_div {
+    background-size: cover;
+    border-radius: 25px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#bg_60_div_01 {
+    background-image: url(/static/eaeo/drive-download-20210523T101027Z-001/Aly.jpeg);
+}
+#bg_60_div_02 {
+    background-image: url(/static/eaeo/drive-download-20210523T101027Z-001/Chantal.png);
+}
+#bg_60_div_03 {
+    background-image: url(/static/eaeo/drive-download-20210523T101027Z-001/George.JPG);
+}
+#bg_60_div_04 {
+    background-image: url(/static/eaeo/drive-download-20210523T101027Z-001/Shell.jpeg);
+}
+#bg_60_div_05 {
+    background-image: url(/static/eaeo/drive-download-20210523T101027Z-001/snap.png);
+}
+#bg_60_div_06 {
+    background-image: url(/static/eaeo/drive-download-20210523T101027Z-001/SierraCropped.png);
+}
+.cu_60_div {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.cu_60_div div {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 30px;
+}
+.cu_60_div .sp_60_hd {
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 22px;
+}
+.cu_60_div .sp_60_rv {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    display: none;
+}
+
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.carousel-item {
+    background-color: #232B26;
+}
+
+.fblgbtn_tb {
+    max-width: 272px;
+    min-width: initial;
+    width: auto;
+    height: 40px;
+    background-color: #1877f2;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    table-layout: fixed;
+    display: inline-block;
+}
+.fblgbtn_ftd {
+    width: 40px;
+}
+.fblgbtn_tt {
+    border: none;
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: .25px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: clip;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 1px;
+    margin: 0 24px 0 12px;
+    margin-left: 0;
+    margin-right: 12px;
+}
+.fblgbtn_sp {
+    margin: 8px 8px 8px 12px;
+    float: left;
+    height: 24px;
+}

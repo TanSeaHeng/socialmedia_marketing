@@ -1,0 +1,128 @@
+{% if res != None %}
+    <html>
+        <body style="background-image: url('{{ background_url_ }}');background-size: 100% 100%">
+            <table style="width: 100%"><tbody>
+                <tr>
+                    <td style="width: 50%;padding-right: 5pt; padding-left: 5pt; vertical-align: top">
+                        <table style="padding-right: 0pt;padding-left: 0pt;margin-top: 20pt;width: 100%"><tbody>
+                            <tr>
+                                <td style="width: 50%;"></td>
+                                <td>
+                                    <img src="{{ profile_picture_url }}" style="width: 100%;border-radius: 50%;border: solid 1pt #9e0505">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table style="padding-right: 30pt;padding-left: 30pt;margin-top: 10pt;width: 100%"><tbody>
+                            <tr>
+                                <td style="font-size: 12pt;text-align: center;width: 33%">{{ following }}</td>
+                                <td style="font-size: 12pt;text-align: center;width: 33%">{{ eng }}%</td>
+                                <td style="font-size: 12pt;text-align: center;width: 33%">{{ origin_cn }}</td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: 12pt;text-align: center;width: 33%">Following</td>
+                                <td style="font-size: 12pt;text-align: center;width: 33%">Eng</td>
+                                <td style="font-size: 12pt;text-align: center;width: 33%">Country</td>
+                            </tr>
+                        </tbody></table>
+                        <table style="padding-right: 38pt;padding-left: 22pt;margin-top: 10pt;width: 100%"><tbody>
+                            {% for row in dozenposts %}
+                            <tr>
+                                <td style="padding-bottom: 8pt;vertical-align: top;padding-right: 0;padding-left: 8pt;width: 33%">
+                                    <img src="{{ row.fs.media_suare_url }}" style="width: 100%">
+                                </td>
+                                <td style="padding-bottom: 8pt;vertical-align: top;padding-right: 0;padding-left: 8pt;width: 33%">
+                                {% if row.sc %}
+                                    <img src="{{ row.sc.media_suare_url }}" style="width: 100%">
+                                {% endif %}
+                                </td>
+                                <td style="padding-bottom: 8pt;vertical-align: top;padding-right: 0;padding-left: 8pt;width: 33%">
+                                {% if row.th %}
+                                    <img src="{{ row.th.media_suare_url }}" style="width: 100%">
+                                {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                        </table>
+                    </td>
+                    <td style="width: 50%;padding-left: 5pt;padding-right: 5pt; vertical-align: top">
+                        <table style="margin-top: 80pt;padding-right: 10pt;padding-left: 10pt;width: 100%">
+                            <tbody>
+                                <tr><td>
+                                    <span style = "font: bold;font-size:30pt;text-align: left;color: #e42b56;">{{ real_name }}</span>&nbsp;&nbsp;
+                                    {% if flag_url != '' %}
+                                        <img src="{{ flag_url_ }}" style="width: 30pt;height: 18pt">
+                                    {% endif %}
+                                </td></tr>
+                            </tbody></table>
+                        {% if content.campaign_write_up != '' %}
+                            <table style="margin-top: 20pt;padding-right: 10pt;padding-left: 10pt;width: 100%">
+                                <tbody>
+                                    <tr><td>
+                                        <span style = "font-size:20pt;text-align: left;">{{ campaign_write_up }}</span>
+                                    </td></tr>
+                                </tbody>
+                            </table>
+                        {% endif %}
+                        <table style="margin-top: 20pt;padding-right: 10pt;padding-left: 10pt;width: 100%">
+                            <tbody>
+                                <tr>
+                                    <td><span style = "font: bold;font-size:20pt;text-align: left;">AGE</span></td>
+                                </tr>
+                                {% if age_dmg_list_res %}
+                                    {% for item in age_pecent_list %}
+                                        <tr>
+                                            <td><span style = "font-size:20pt;text-align: left;">{{ item.key }}:&nbsp;&nbsp;&nbsp;&nbsp;{{ item.value }}%</span></td>
+                                        </tr>
+                                    {% endfor %}
+                                {% else %}
+                                    <tr><td>Not found any ages</td></tr>
+                                {% endif %}
+                            </tbody>
+                        </table>
+                        <table style="margin-top: 20pt;padding-right: 10pt;padding-left: 10pt;width: 100%">
+                            <tbody>
+                                <tr>
+                                    <td><span style = "font: bold;font-size:20pt;text-align: left;">LOCATION</span></td>
+                                </tr>
+                                {% if location_dmg_res %}
+                                    {% for item in cn_dmg_list %}
+                                        <tr>
+                                            <td><span style = "font-size:20pt;text-align: left;">{{ item.key }}:&nbsp;&nbsp;&nbsp;&nbsp;{{ item.value }}%</span></td>
+                                        </tr>
+                                    {% endfor %}
+                                {% else %}
+                                    <tr><td>Not found</td></tr>
+                                {% endif %}
+                            </tbody>
+                        </table>
+                        <table style="margin-top: 20pt;padding-right: 10pt;padding-left: 10pt;width: 100%">
+                            <tbody>
+                                <tr>
+                                    <td><span style = "font: bold;font-size:20pt;text-align: left;">GENDER</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span style = "font-size:20pt;text-align: left;">{{ gender }}:&nbsp;&nbsp;&nbsp;&nbsp;{{ gender_percent }}%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table style="margin-top: 20pt;padding-right: 10pt;padding-left: 10pt;width: 100%">
+                            <tr><td>
+                                <span style="font-size: 20pt">YouTube Videos:&nbsp;&nbsp;&nbsp;&nbsp;{{ content.inf_cam_ytb }}</span>
+                            </td></tr>
+                            <tr><td>
+                                <span style="font-size: 20pt">Instagram Posts:&nbsp;&nbsp;&nbsp;&nbsp;{{ content.inf_cam_insp }}</span>
+                            </td></tr>
+                            <tr><td>
+                                <span style="font-size: 20pt">Instagram Stories:&nbsp;&nbsp;&nbsp;&nbsp;{{ content.inf_cam_inss }}</span>
+                            </td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody></table>
+        </body>
+    </html>
+
+{% else %}
+    sorry, something went wrong!
+{% endif %}

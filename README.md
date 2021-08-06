@@ -1,0 +1,1 @@
+gunicorn --worker-tmp-dir /dev/shm --chdir /app/backend eaeo.wsgi

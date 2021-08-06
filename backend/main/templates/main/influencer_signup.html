@@ -1,0 +1,246 @@
+{% load static %}
+{% load i18n %}
+
+<html style="height: auto; min-height: 100%;"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> EAEO </title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="shortcut icon" href="/static/telmtcp/img/icon/telegrammt4.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/static/library/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/library/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/library/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="/static/library/dist/css/skins/_all-skins.css">
+  <link rel="stylesheet" href="/static/library/plugins/iCheck/all.css">
+  <link rel="stylesheet" href="/static/library/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="/static/eaeo/main.css">
+  <link rel="stylesheet" href="/static/library/bower_components/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" href="/static/library/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="/static/eaeo/land_asset/owl/owl.carousel.css" type="text/css" />
+    <link rel="stylesheet" href="/static/eaeo/land_asset/owl/owl.theme.css" type="text/css" />
+
+  <script src="/static/library/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/static/library/bower_components/jquery-ui/jquery-ui.min.js"></script>
+  <script src="/static/eaeo/main.js"></script>
+</head>
+<body class="skin-blue sidebar-mini" style="height: auto; min-height: 100%;">
+
+<div class="wrapper" style="height: auto; min-height: 100%;">
+
+  <header class="main-header">
+      <div class="cu-header">
+            <a class="logo" style="background-color: #131313;text-align: left;height: 70px">
+              <span class="logo-lg hand"><img src="/static/library/img/eaeo_logo.png" alt="" class="img-fluid" style="height: 70px;max-height: 70px;"></span>
+            </a>
+            <nav class="navbar navbar-static-top" style="background-color: #131313">
+            </nav>
+      </div>
+  </header>
+
+  {% csrf_token %}
+
+  <div class="content-wrapper" style="margin-left: 0 !important;background-image: url(/static/library/img/influencer_land_03.jpeg);background-size: cover;overflow-x: hidden;overflow-y: scroll;height: 100vh;">
+      {% block content %}
+          <div class="row" style="margin-top: 70px">
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-offset-3 col-sm-9" style="padding-top: 100px;padding-left: 50px;padding-right: 50px">
+                        <span class="land_title" style="color: #7cab8b;font-weight: bold">
+                            Get matched to campaigns suited to you
+                        </span>
+                    </div>
+                    <div class="col-sm-offset-3 col-sm-9" style="padding-top:20px; padding-left: 50px;padding-right: 50px">
+                        <span style="font-size: 25px;color: white">Connect with us so we can verify your profile and match you up with one of our campaigns!</span>
+                    </div>
+                    <div class="col-sm-offset-3 col-sm-9" style="padding-top:20px; padding-left: 50px;padding-right: 50px">
+                        <span style="font-size: 25px;color: white">We take a quick snapshot of your stats to ensure you align with our campaign criteria and objectives</span>
+                    </div>
+                    <div class="col-sm-offset-3 col-sm-9" style="padding-top:40px; padding-left: 50px;padding-right: 50px;text-align: center">
+                        <table class="fblgbtn_tb" cellspacing="0" cellpadding="0" onclick="onclick_connect()">
+                            <tbody>
+                                <tr>
+                                    <td class="fblgbtn_ftd"><div>
+                                        <span class="fblgbtn_sp"><img class="img" src="https://static.xx.fbcdn.net/rsrc.php/v3/yN/r/szGrb_tkxMW.png" alt="" width="24" height="24"></span>
+                                    </div></td>
+                                    <td><div class="fblgbtn_tt">Continue with Facebook</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-6" style="padding-top: 50px;">
+                        <div>
+                            <a href="{% url "social:begin" "facebook" %}"><img src="/static/eaeo/phone.gif" style="width: 100%;" onclick=""></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6"></div>
+                </div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 100px;margin-bottom: 100px;margin-left: 50px;margin-right: 50px;"></div>
+          <div class="row" style="padding-top: 10px;padding-bottom: 10px; background-color: #131313">
+          <div class="col-sm-12">
+                <div id="clients-carousel" class="section owl-carousel carousel-full m-0 pb-0">
+                    <div class="carousel-item"><a href="#" class="desaturate"><img src="/static/eaeo/drive-download-20210523T100958Z-001/Geologie_white.png" class="img-responsive"  alt="Clients"></a></div>
+                    <div class="carousel-item"><a href="#" class="desaturate"><img src="/static/eaeo/drive-download-20210523T100958Z-001/Netflix_white.png" class="img-responsive"  alt="Clients"></a></div>
+                    <div class="carousel-item"><a href="#" class="desaturate"><img src="/static/eaeo/drive-download-20210523T100958Z-001/reading_eggs_white.png" class="img-responsive"  alt="Clients"></a></div>
+                    <div class="carousel-item"><a href="#" class="desaturate"><img src="/static/eaeo/drive-download-20210523T100958Z-001/TMI.png" class="img-responsive"  alt="Clients"></a></div>
+                    <div class="carousel-item"><a href="#" class="desaturate"><img src="/static/eaeo/drive-download-20210523T100958Z-001/xplora_white.png" class="img-responsive"  alt="Clients"></a></div>
+                    <div class="carousel-item"><a href="#" class="desaturate"><img src="/static/eaeo/drive-download-20210523T100958Z-001/Mallorca_Files.png" class="img-responsive" alt="Clients"></a></div>
+                    <div class="carousel-item"><a href="#" class="desaturate"><img src="/static/eaeo/drive-download-20210523T100958Z-001/88-884873_warner-bros-logo-warner-brothers-white-logo-png.png" class="img-responsive"  alt="Clients"></a></div>
+                    <div class="carousel-item"><a href="#" class="desaturate"><img src="/static/eaeo/drive-download-20210523T100958Z-001/1280px-BritBox_logo.png" class="img-responsive"  alt="Clients"></a></div>
+                    <div class="carousel-item"><a href="#" class="desaturate"><img src="/static/eaeo/drive-download-20210523T100958Z-001/Betterly-LogoPOS%5BRGB%5Dw_slogan.png" class="img-responsive"  alt="Clients"></a></div>
+                    <div class="carousel-item"><a href="#" class="desaturate"><img src="/static/eaeo/drive-download-20210523T100958Z-001/debut_app.png" class="img-responsive"  alt="Clients"></a></div>
+                    <div class="carousel-item"><a href="#" class="desaturate"><img src="/static/eaeo/drive-download-20210523T100958Z-001/Doctor-Who-Logo.png" class="img-responsive"  alt="Clients"></a></div>
+
+                </div>
+          </div>
+
+          </div>
+          <div class="row" style="margin-top: 100px;margin-bottom: 100px;margin-left: 50px;margin-right: 50px">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-4 cu_6_col">
+                        <div class="imin">
+                            <div class="bg_60_div" id="bg_60_div_01"></div>
+                            <div class="cu_60_div">
+                                <div>
+                                    <span class="sp_60_rv">It's been an absolute joy working with each and everyone! I love the creative campaigns and I was lucky enough to be asked to be involved! The briefs were always so straightward, allowing influencers freedom to brainstorm on the creative direction. Meg was so fast answering any questions while the entire process wea so smooth each time. From posting to sharing stats and making payment, everything is effortless with these guys!
+                                    </span>
+                                    <span class="sp_60_hd">@Allmumstalk</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 cu_6_col">
+                        <div class="imin">
+                            <div class="bg_60_div" id="bg_60_div_02"></div>
+                            <div class="cu_60_div">
+                                <div>
+                                    <span class="sp_60_rv">We have thoroughly enjoyed working with the Eaeo team on our Geologie partnership. Our clients think the products are terrific and the professionalism and terrific communication from the eaeo team has been top-notch
+                                    </span>
+                                    <span class="sp_60_hd">Chantal Rotondo<br>Director Of Talent & Partnerships<br>Long Haul Management Inc.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 cu_6_col">
+                        <div class="imin">
+                            <div class="bg_60_div" id="bg_60_div_03"></div>
+                            <div class="cu_60_div">
+                                <div>
+                                    <span class="sp_60_rv">Working with Eaeo was an absolute pleasure from start to finish! I've worked with them on two campaigns now and each ran as smoothly as I could 've hoped for! Both Meg and Ben are exremely helpful and offered multiple concept ideas to go alongside their briefs and campaign documents which made the content creation as easy as possible! They are extremely responsive and even when I was to message late at night, I would always receive a quick and informative response. I can't wait to work with these guys again
+                                    </span>
+                                    <span class="sp_60_hd">George Coyle Founder GC Management</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 cu_6_col">
+                        <div class="imin">
+                            <div class="bg_60_div" id="bg_60_div_04"></div>
+                            <div class="cu_60_div">
+                                <div>
+                                    <span class="sp_60_rv">I always enjoy working with eaeo! The campaigns are well managed even when given a short timeframe and the briefs are clear and easy to understand. I know my contact at eaeo will get back to me quickly with any questions that I may have and are swift to reply with the brand feedback which thankfully always seems to be well received which gives me confidence I have fulfilled the brief well with my creative content.
+                                I know when I'm contacted by eaeo that the campaign wil be a good fit for us and my audience and my content always receives good engagement as it's a natural fit our lifestyle and my feed.
+                                It's a pleasure working with eaeo and I look forward to working with them again soon.
+                                    </span>
+                                    <span class="sp_60_hd">@shellandthelittlies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 cu_6_col">
+                        <div class="imin">
+                            <div class="bg_60_div" id="bg_60_div_05"></div>
+                            <div class="cu_60_div">
+                                <div>
+                                    <span class="sp_60_rv">It's been an absolute joy working with each and everyone! I love the creative campaigns and I was lucky enough to be asked to be involved! The briefs were always so straightward, allowing influencers freedom to brainstorm on the creative direction. Meg was so fast answering any questions while the entire process wea so smooth each time. From posting to sharing stats and making payment, everything is effortless with these guys!
+                                    </span>
+                                    <span class="sp_60_hd">@Allmumstalk</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 cu_6_col">
+                        <div class="imin">
+                            <div class="bg_60_div" id="bg_60_div_06"></div>
+                            <div class="cu_60_div">
+                                <div>
+                                    <span class="sp_60_rv">It's been an absolute joy working with each and everyone! I love the creative campaigns and I was lucky enough to be asked to be involved! The briefs were always so straightward, allowing influencers freedom to brainstorm on the creative direction. Meg was so fast answering any questions while the entire process wea so smooth each time. From posting to sharing stats and making payment, everything is effortless with these guys!
+                                    </span>
+                                    <span class="sp_60_hd">@Allmumstalk</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+      {% endblock %}
+  </div>
+
+    <div id="loading" style="position:absolute; z-index: 99999; display:None; left: 50%; top: 35%"><img src="/static/library/img/loading.svg">
+    </div>
+    <div id="waiting" class=""></div>
+  <div class="control-sidebar-bg"></div>
+</div>
+
+<script src="/static/library/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/static/library/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/static/library/bower_components/fastclick/lib/fastclick.js"></script>
+<script src="/static/library/dist/js/adminlte.min.js"></script>
+<script src="/static/library/plugins/iCheck/icheck.min.js"></script>
+<script src="/static/library/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/static/library/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="/static/library/bower_components/select2/dist/js/select2.full.min.js"></script>
+<script src="/static/eaeo/land_asset/owl/owl.carousel.min.js"></script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0&appId=433294417989709&autoLogAppEvents=1" nonce="4IIUTjOR"></script>
+<script>
+    $(document).ready(function() {
+        var cCarousel = $("#clients-carousel");
+        cCarousel.owlCarousel({
+        });
+    });
+
+    function onclick_connect() {
+        window.location.href = '/login/facebook';
+    }
+    $('.img-responsive').click(function (e) {
+        e.preventDefault();
+        return;
+    });
+    $("#clients-carousel").click(function (e) {
+        e.preventDefault();
+        return;
+    });
+    $(".imin").on('mouseover', function (e) {
+        let imin = $(this).find('.bg_60_div');
+        let hd = $(this).find('.sp_60_hd');
+        let rv = $(this).find('.sp_60_rv');
+        setTimeout(function () {
+            imin.css('opacity', 0.6);
+            hd.css('display', 'none');
+            rv.css('display', 'block');
+        }, 100);
+    });
+    $(".imin").on('mouseout', function (e) {
+        let imin = $(this).find('.bg_60_div');
+        let hd = $(this).find('.sp_60_hd');
+        let rv = $(this).find('.sp_60_rv');
+        setTimeout(function () {
+            imin.css('opacity', 1);
+            hd.css('display', 'block');
+            rv.css('display', 'none');
+        }, 100);
+    });
+</script>
+</body></html>
